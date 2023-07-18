@@ -25,7 +25,7 @@ jobs:
           with:
             folder: build
             bucket-region: "us-east-2"
-            bucket: "mohamed-main-test-bucket"
+            bucket: "codecraftersconsulting.com"
             # dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
             # invalidation: /
             # delete-removed: true
