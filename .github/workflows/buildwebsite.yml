@@ -24,11 +24,11 @@ jobs:
           uses: reggionick/s3-deploy@v3
           with:
             folder: build
-            bucket: "us-east-2"
-            bucket-region: "mohamed-main-test-bucket"
+            bucket-region: "us-east-2"
+            bucket: "mohamed-main-test-bucket"
             # dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
             # invalidation: /
             # delete-removed: true
             # no-cache: true
             # private: true
-            files-to-include: ".*/*,*/*,**"
+            # files-to-include: ".*/*,*/*,**"
