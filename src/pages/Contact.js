@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import CreateUserForm from '../components/Template/NewUserSubmit';
 import Main from '../layouts/Main';
 import EmailLink from '../components/Contact/EmailLink';
 import ContactIcons from '../components/Contact/ContactIcons';
@@ -21,6 +21,7 @@ const Contact = () => (
         <EmailLink />
       </div>
       <ContactIcons />
+      <CreateUserForm />
     </article>
   </Main>
 );

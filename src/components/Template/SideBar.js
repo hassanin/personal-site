@@ -12,14 +12,14 @@ const SideBar = () => (
         <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Mohamed K&apos;Hassanin</h2>
+        <h2>Mohamed K Hassanin</h2>
         <p><a href="hassanin@udel.edu">hassanin@udel.edu</a></p>
       </header>
     </section>
 
     <section className="blurb">
       <h2>About</h2>
-      <p>Hi, I am Mohamed. I like building things.
+      <p>Hi, I am Mohamed. I tutor Math and computer Science .
       </p>
       <ul className="actions">
         <li>
