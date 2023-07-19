@@ -11,15 +11,17 @@ const CreateUserForm = () => {
     phone: '',
   });
 
-  async function createNewUser(user1) {
+  function createNewUser(user1) {
     // console.log(user);
     console.info(`user: ${JSON.stringify(user1)}`);
     const blobServiceClient = new BlobServiceClient(SasUrl);
     const containerClient = blobServiceClient.getContainerClient('leads');
     const fileId = uuidv4().toString();
     const blockBlobClient = containerClient.getBlockBlobClient(fileId);
-    const _res = await blockBlobClient.uploadData(JSON.stringify(user1));
-    console.info(_res._response);
+    blockBlobClient.uploadData(JSON.stringify(user1)).then((res) => {
+      console.info(`res: ${res}`);
+    });
+    // console.info(_res._response);
   }
 
   const [errors, setErrors] = useState({
@@ -54,11 +56,11 @@ const CreateUserForm = () => {
     }
 
     // Phone validation regex for a simple 10-digit phone number
-    const phoneRegex = /^[2-9]{2}[0-9]{8}$/;
-    if (!phoneRegex.test(user.phone)) {
-      isValid = false;
-      errors.phone = 'Phone number is not valid.';
-    }
+    // const phoneRegex = /^[2-9]{2}[0-9]{8}$/;
+    // if (!phoneRegex.test(user.phone)) {
+    //   isValid = false;
+    //   errors.phone = 'Phone number is not valid.';
+    // }
 
     setErrors(errors);
 
